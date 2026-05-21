@@ -1,4 +1,4 @@
-# Portfolio
+# marie-kasongo.github.io
 Biomedical Engineering student at Brown University interested in biomedical imaging, AI in healthcare, and translational research.
 
 # Hi, I’m Marie 👋
