@@ -2,10 +2,11 @@
 <html>
 
 <head>
+
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-  <title>Marie Kasongo Portfolio</title>
+  <title>Marie Kasongo</title>
 
   <style>
 
@@ -18,20 +19,25 @@
 
     body{
       font-family:Arial, sans-serif;
-      background:linear-gradient(to bottom,#fff7fa,#ffffff);
+      background:#fff7fa;
       color:#333;
+      overflow-x:hidden;
     }
 
+    /* NAVBAR */
+
     nav{
-      position:sticky;
+      position:fixed;
       top:0;
-      background:white;
-      padding:20px 8%;
+      width:100%;
+      padding:25px 8%;
       display:flex;
       justify-content:space-between;
       align-items:center;
-      border-bottom:1px solid #ffd9e8;
-      z-index:100;
+      background:rgba(255,255,255,0.85);
+      backdrop-filter:blur(10px);
+      z-index:1000;
+      border-bottom:1px solid #ffd6e5;
     }
 
     nav h1{
@@ -41,195 +47,226 @@
 
     nav ul{
       display:flex;
-      gap:25px;
       list-style:none;
+      gap:30px;
     }
 
     nav a{
       text-decoration:none;
       color:#ec4899;
       font-weight:bold;
+      transition:0.3s;
+    }
+
+    nav a:hover{
+      opacity:0.7;
+    }
+
+    /* GENERAL SECTIONS */
+
+    section{
+      min-height:100vh;
+      padding:120px 10%;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+    }
+
+    .container{
+      width:100%;
+      max-width:1300px;
     }
 
     /* HERO */
 
     .hero{
-      min-height:100vh;
       display:grid;
       grid-template-columns:1fr 1fr;
+      gap:70px;
       align-items:center;
-      gap:60px;
-      padding:0 8%;
     }
 
     .hero-text h2{
-      font-size:35px;
-      margin-bottom:15px;
+      font-size:38px;
+      margin-bottom:10px;
     }
 
     .hero-text h1{
-      font-size:85px;
+      font-size:90px;
       color:#ec4899;
-      line-height:1;
+      line-height:0.95;
       margin-bottom:25px;
     }
 
     .hero-text p{
       font-size:22px;
-      line-height:1.7;
       color:#666;
+      line-height:1.8;
       margin-bottom:35px;
       max-width:600px;
     }
 
-    .hero-buttons{
+    .buttons{
       display:flex;
       gap:20px;
       flex-wrap:wrap;
     }
 
     .btn{
-      padding:16px 28px;
+      padding:18px 32px;
       border:none;
       border-radius:18px;
       font-size:18px;
+      font-weight:bold;
       cursor:pointer;
       transition:0.3s;
-      font-weight:bold;
     }
 
     .pink-btn{
       background:#ec4899;
       color:white;
-      box-shadow:0 10px 20px rgba(236,72,153,0.2);
+      box-shadow:0 10px 20px rgba(236,72,153,0.25);
     }
 
     .pink-btn:hover{
       background:#db2777;
+      transform:translateY(-3px);
     }
 
     .outline-btn{
       background:white;
-      color:#ec4899;
       border:2px solid #f9a8d4;
+      color:#ec4899;
     }
 
     .outline-btn:hover{
       border-color:#ec4899;
+      transform:translateY(-3px);
     }
 
     .hero img{
       width:100%;
-      max-width:430px;
+      max-width:450px;
       border-radius:35px;
       box-shadow:0 20px 40px rgba(236,72,153,0.2);
     }
 
-    /* SECTIONS */
+    /* TITLES */
 
-    .sections{
-      width:85%;
-      margin:auto;
-      padding-bottom:100px;
-    }
-
-    details{
-      background:white;
-      border-radius:28px;
-      margin-bottom:30px;
-      border:1px solid #ffe4ef;
-      overflow:hidden;
-      box-shadow:0 5px 20px rgba(0,0,0,0.03);
-    }
-
-    summary{
-      padding:30px;
-      font-size:34px;
-      font-weight:bold;
+    .section-title{
+      font-size:70px;
       color:#ec4899;
-      cursor:pointer;
-      list-style:none;
+      margin-bottom:30px;
+      text-align:center;
     }
 
-    .content{
-      padding:0 35px 35px;
-    }
-
-    .content p{
-      font-size:20px;
-      line-height:1.8;
+    .section-text{
+      font-size:22px;
       color:#666;
-      margin-bottom:25px;
+      line-height:1.8;
+      max-width:900px;
+      margin:auto;
+      text-align:center;
+      margin-bottom:50px;
     }
 
     /* CARDS */
 
     .cards{
       display:grid;
-      grid-template-columns:1fr 1fr 1fr;
-      gap:20px;
+      grid-template-columns:repeat(3,1fr);
+      gap:25px;
+      margin-top:30px;
     }
 
     .card{
-      background:#fff0f6;
-      border-radius:22px;
-      padding:25px;
+      background:white;
+      padding:35px;
+      border-radius:28px;
+      border:1px solid #ffe4ef;
       transition:0.3s;
+      box-shadow:0 5px 20px rgba(0,0,0,0.03);
     }
 
     .card:hover{
-      transform:translateY(-5px);
+      transform:translateY(-8px);
+      box-shadow:0 15px 30px rgba(236,72,153,0.12);
     }
 
     .card h3{
       color:#ec4899;
-      margin-bottom:15px;
-      font-size:24px;
+      font-size:28px;
+      margin-bottom:18px;
     }
 
     .card p{
-      font-size:17px;
-      margin-bottom:0;
+      color:#666;
+      line-height:1.7;
+      font-size:18px;
+    }
+
+    /* CONTACT */
+
+    .contact-box{
+      background:white;
+      border-radius:35px;
+      padding:60px;
+      text-align:center;
+      border:1px solid #ffe4ef;
+      box-shadow:0 10px 30px rgba(0,0,0,0.03);
+    }
+
+    .contact-box p{
+      font-size:24px;
+      color:#666;
+      line-height:2;
     }
 
     footer{
-      text-align:center;
       padding:40px;
-      border-top:1px solid #ffd9e8;
-      color:#777;
+      text-align:center;
+      color:#888;
+      border-top:1px solid #ffd6e5;
+      background:white;
     }
 
-    @media(max-width:900px){
+    /* MOBILE */
+
+    @media(max-width:950px){
+
+      nav ul{
+        display:none;
+      }
 
       .hero{
         grid-template-columns:1fr;
         text-align:center;
-        padding-top:80px;
       }
 
       .hero-text h1{
-        font-size:60px;
-      }
-
-      .hero-buttons{
-        justify-content:center;
+        font-size:65px;
       }
 
       .hero img{
         margin:auto;
       }
 
+      .buttons{
+        justify-content:center;
+      }
+
       .cards{
         grid-template-columns:1fr;
       }
 
-      nav ul{
-        display:none;
+      .section-title{
+        font-size:50px;
       }
 
     }
 
   </style>
+
 </head>
 
 <body>
@@ -249,167 +286,177 @@
 
   </nav>
 
-  <!-- HERO -->
+  <!-- HERO SECTION -->
 
-  <section class="hero">
+  <section>
 
-    <div class="hero-text">
+    <div class="container hero">
 
-      <h2>Hi, I'm</h2>
+      <div class="hero-text">
 
-      <h1>Marie Kasongo</h1>
+        <h2>Hi, I'm</h2>
 
-      <p>
-        An aspiring Biomedical Engineer passionate about biomedical imaging, healthcare innovation, computational biology, and translational medicine.
-      </p>
+        <h1>Marie Kasongo</h1>
 
-      <div class="hero-buttons">
+        <p>
+          An aspiring Biomedical Engineer passionate about biomedical imaging, computational biology, healthcare innovation, and translational medicine.
+        </p>
 
-        <button class="btn pink-btn">
-          View My Work ↓
-        </button>
+        <div class="buttons">
 
-        <button class="btn outline-btn">
-          Resume
-        </button>
+          <button class="btn pink-btn">
+            View My Work ↓
+          </button>
+
+          <button class="btn outline-btn">
+            Resume
+          </button>
+
+        </div>
 
       </div>
 
-    </div>
+      <div>
+        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=1200&auto=format&fit=crop">
+      </div>
 
-    <div>
-      <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=1200&auto=format&fit=crop">
     </div>
 
   </section>
 
-  <!-- DROPDOWN SECTIONS -->
+  <!-- ABOUT -->
 
-  <section class="sections">
+  <section id="about">
 
-    <!-- ABOUT -->
+    <div class="container">
 
-    <details id="about">
+      <h1 class="section-title">
+        About Me
+      </h1>
 
-      <summary>💗 About Me</summary>
+      <p class="section-text">
+        I am a Biomedical Engineering student at Brown University interested in biomedical imaging, cancer research, AI in healthcare, and computational biology. I enjoy combining engineering and scientific research to explore innovative healthcare solutions.
+      </p>
 
-      <div class="content">
+    </div>
 
-        <p>
-          I am a Biomedical Engineering student at Brown University interested in biomedical imaging, AI in healthcare, cancer research, and computational biology. I enjoy combining engineering, research, and scientific problem solving to explore innovative healthcare solutions.
-        </p>
+  </section>
 
-      </div>
+  <!-- RESEARCH -->
 
-    </details>
+  <section id="research">
 
-    <!-- RESEARCH -->
+    <div class="container">
 
-    <details id="research">
+      <h1 class="section-title">
+        Research Experience
+      </h1>
 
-      <summary>🧪 Research Experience</summary>
+      <p class="section-text">
+        My research experience focuses on biomedical imaging, computational analysis, and cancer biology using quantitative imaging workflows and scientific data interpretation.
+      </p>
 
-      <div class="content">
+      <div class="cards">
 
-        <p>
-          My research experience focuses on biomedical imaging, computational analysis, and cancer biology. I have worked on projects involving cell morphology analysis, microscopy workflows, and scientific data interpretation.
-        </p>
+        <div class="card">
 
-        <div class="cards">
+          <h3>Wong Lab</h3>
 
-          <div class="card">
+          <p>
+            Circulating tumor cell morphology analysis using CellProfiler and Cellpose workflows.
+          </p>
 
-            <h3>Wong Lab</h3>
+        </div>
 
-            <p>
-              Circulating tumor cell morphology analysis using CellProfiler and Cellpose.
-            </p>
+        <div class="card">
 
-          </div>
+          <h3>Biomedical Imaging</h3>
 
-          <div class="card">
+          <p>
+            Microscopy analysis, fluorescence imaging, and computational imaging workflows.
+          </p>
 
-            <h3>Biomedical Imaging</h3>
+        </div>
 
-            <p>
-              Microscopy analysis and fluorescence imaging workflows.
-            </p>
+        <div class="card">
 
-          </div>
+          <h3>Computational Research</h3>
 
-          <div class="card">
-
-            <h3>Computational Research</h3>
-
-            <p>
-              PCA analysis, quantitative image analysis, and data visualization.
-            </p>
-
-          </div>
+          <p>
+            PCA analysis, image segmentation, and quantitative biological data analysis.
+          </p>
 
         </div>
 
       </div>
 
-    </details>
+    </div>
 
-    <!-- PROJECTS -->
+  </section>
 
-    <details id="projects">
+  <!-- PROJECTS -->
 
-      <summary>💻 Featured Projects</summary>
+  <section id="projects">
 
-      <div class="content">
+    <div class="container">
 
-        <p>
-          A collection of engineering, research, and computational projects combining biomedical science with technical problem solving.
-        </p>
+      <h1 class="section-title">
+        Featured Projects
+      </h1>
 
-        <div class="cards">
+      <p class="section-text">
+        Engineering, research, and computational projects combining biomedical science with technical problem solving.
+      </p>
 
-          <div class="card">
+      <div class="cards">
 
-            <h3>CTC Morphology</h3>
+        <div class="card">
 
-            <p>
-              Investigating how extracellular matrix stiffness affects tumor cell morphology.
-            </p>
+          <h3>CTC Morphology</h3>
 
-          </div>
+          <p>
+            Research project investigating how extracellular matrix stiffness affects circulating tumor cell morphology.
+          </p>
 
-          <div class="card">
+        </div>
 
-            <h3>MATLAB Simulation</h3>
+        <div class="card">
 
-            <p>
-              Projectile motion and ODE-based engineering simulation project.
-            </p>
+          <h3>MATLAB Simulation</h3>
 
-          </div>
+          <p>
+            Projectile motion and ODE-based engineering simulation project.
+          </p>
 
-          <div class="card">
+        </div>
 
-            <h3>Image Analysis</h3>
+        <div class="card">
 
-            <p>
-              Computational imaging workflows using CellProfiler and Cellpose.
-            </p>
+          <h3>Image Analysis</h3>
 
-          </div>
+          <p>
+            Computational imaging workflows using CellProfiler and Cellpose.
+          </p>
 
         </div>
 
       </div>
 
-    </details>
+    </div>
 
-    <!-- CONTACT -->
+  </section>
 
-    <details id="contact">
+  <!-- CONTACT -->
 
-      <summary>💌 Contact Me</summary>
+  <section id="contact">
 
-      <div class="content">
+    <div class="container">
+
+      <div class="contact-box">
+
+        <h1 class="section-title">
+          Contact Me
+        </h1>
 
         <p>
           Email: your-email@gmail.com
@@ -421,7 +468,7 @@
 
       </div>
 
-    </details>
+    </div>
 
   </section>
 
