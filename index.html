@@ -235,15 +235,19 @@
    }
    .modal-content{
      background:white;
-     margin:6% auto;
      padding:50px;
      width:60%;
      max-width:750px;
      border-radius:35px;
-     position:relative;
+     position:absolute;
+     top:50%;
+     left:50%;
+     transform:translate(-50%, -50%);
+     z-index:3000;
      box-shadow:0 20px 50px rgba(0,0,0,0.15);
      animation:fadeIn 0.3s ease;
    }
+   
    /* CONTACT */
 
     footer{
