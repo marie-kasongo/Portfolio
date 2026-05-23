@@ -487,56 +487,46 @@
       <div class="cards">
 
         <!-- Circulating Tumor Cell Imaging -->
-
         <div class="card-link" onclick="openModal('ctcModal')">
-
           <div class="card">
-
             <h3>
               Circulating Tumor Cell Imgaging
             </h3>
-
             <p>
               Quantitative analysis of circulating tumor cells using fluorescence microscopy, image segmentation, and computational imaging techniques for cancer characterization.
             </p>
-
           </div>
-
         </div>
 
       <!-- CTC MODAL -->
        <div id="ctcModal" class="modal">
         <div class="modal-content">
-         
          <span class="close" onclick="closeModal('ctcModal')"> 
           &times;
          </span>
-
          <h2>
           Circulating Tumor Cell Imaging
-        </h2>
-
-        <h4>
-         Wong Bioimaging Engineering Laboratory Brown University
-       </h4> 
+         </h2>
+         <h4>
+          Wong Bioimaging Engineering Laboratory Brown University
+         </h4> 
       <br><br>
 
-      <!-- OBJECTIVE -->
+      <!-- ABSTRACT -->
      <h3 class="popup-section-title">
        Abstract
      </h3>
-
     <p class="popup-text">
       This project investigated how extracellular matrix stiffness influences circulating tumor cell (CTC) morphology and behavior during cancer progression. Circulating tumor cells are cancer cells that detach from primary tumors and travel through the bloodstream, where they may eventually seed metastatic tumors in distant tissues. 
       To better understand how physical microenvironments shape cellular structure and invasive potential, CTCs were cultured on soft and stiff polyacrylamide gel substrates designed to simulate tissue-like environments. By combining fluorescence microscopy with computational image segmentation and morphology analysis, this work explored how substrate stiffness alters cellular spreading, elongation, and structural organization.
     </p>
     <br><br>
 
-    <!-- RESEARCH WORKFLOW -->
+    <!-- RESEARCH APPROACH -->
     <h3 class="popup-section-title">
       Research Approach
     </h3>
-
+         
     <ul class="popup-list">
         <li>
           Circulating tumor cells were cultured on soft (0.5 kPa) and stiff (5 kPa) polyacrylamide gel substrates over a three-month experimental period to simulate distinct extracellular microenvironments. To visualize cellular structure, cytoplasmic morphology was labeled with CellMask (Cy5 channel, red), while nuclear morphology was captured with Hoechst (DAPI channel, blue). High-resolution fluorescence microscopy imaging captured these structural adaptations, highlighting visible morphology differences between oft and stiff environments. Cells cultured on stiffer substrates demonstrated increased spreading and structural irregularity, exhibiting more elongated and blob-like morphologies compared to the rounder and more compact cellular organization observed in softer extracellular environments.
@@ -546,10 +536,13 @@
        <p class="image-caption">
          Fluorescence microscopy imaging of CTCs
        </p>
-</div>
+   </div>
+     <ul class="popup-list">
         <li>
           We quantified these visual differences by applying principal component analysis (PCA) to fluorescence microscopy imaging datasets in Excel. PCA results were visualized using heatmaps, where deeper red values indicate stronger positive contributions to principal component variation and deeper blue values indicate stronger negative contributions. These heatmaps simplified the interpretation of complex morphology datasets and highlighted structural features most strongly associated with extracellular matrix stiffness. Our analysis focused primarily on features that effectively captured differences in cellular spreading, elongation, and structural integrity between microenvironments: area, ellipse, major axis length, and compactness. 
         </li>
+     </ul>
+     
      <div class="research-image-container">
       <img src="Cellmask Stained Heatmap.png" width="500">
         <p class="image-caption">
@@ -563,36 +556,21 @@
         DAPI Nuclear Morphology PCA Heatmap
       </p>
    </div>
-  </ul>
 <br><br> 
          
      <!-- ANALYSIS -->
    <h3 class="popup-section-title">
-     Analysis & Interpretation
+     Analysis
    </h3>
          <table class="analysis-table">
            <tr>
          
-             <th>
-               Feature
-             </th>
-         
-             <th>
-               Cy5
-             </th>
-         
-             <th>
-               DAPI
-             </th>
-         
-             <th>
-               Interpretation
-             </th>
-         
+             <th>Feature</th>
+             <th>Cy5</th>
+             <th>DAPI</th>
+             <th>Interpretation</th>   
            </tr>
-         
-           <tr>
-         
+        <tr>
              <td>
                <strong>Area</strong>
              </td>
@@ -612,9 +590,7 @@
              <td>
                Increased cellular spreading under stiff extracellular conditions, with distinct cytoplasmic and nuclear structural adaptation trends.
              </td>
-         
            </tr>
-         
            <tr>
          
              <td>
@@ -636,9 +612,7 @@
              <td>
                Strong morphology variation across environments suggests extracellular stiffness alters overall cellular organization.
              </td>
-         
            </tr>
-         
            <tr>
          
              <td>
@@ -699,9 +673,8 @@
 
           <br><br>
           Together, these results indicate that cells cultured on stiff polyacrylamide gels exhibit increased spreading, elongation, and morphological irregularity compared to cells grown on softer extracellular environments. These structural adaptations are commonly associated with cytoskeletal remodeling, increased migratory behavior, and invasive metastatic potential, supporting the conclusion that extracellular matrix stiffness plays a significant role in shaping circulating tumor cell behavior during cancer progression.
-
-          <br><br>
         </p>
+       <br><br>
          
      <!-- SKILLS -->
     <h3 class="popup-section-title">
@@ -728,9 +701,7 @@
     <br><br>
        </div> <!-- closes modal-content -->
        </div> <!-- closes ctcModal -->
-       </div> <!-- closes cards -->
-       </div> <!-- closes container --> 
-       </section> <!-- closes research -->
+    
         
         <!-- Molecular Engineering -->
 
