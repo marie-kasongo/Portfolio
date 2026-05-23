@@ -495,11 +495,12 @@
 
       <!-- OBJECTIVE -->
      <h3 class="popup-section-title">
-       Objective
+       Abstract
      </h3>
 
     <p class="popup-text">
-      This project explored how extracellular matrix stiffness influences circulating tumor cell morphology and metastatic behavior. By combining fluorescence microscopy with computational segmentation workflows, we investigated how physical microenvironments shape cellular structure, adaptability, and invasive potential during cancer progression.
+      This project investigated how extracellular matrix stiffness influences circulating tumor cell (CTC) morphology and behavior during cancer progression. Circulating tumor cells are cancer cells that detach from primary tumors and travel through the bloodstream, where they may eventually seed metastatic tumors in distant tissues. 
+      To better understand how physical microenvironments shape cellular structure and invasive potential, CTCs were cultured on soft and stiff polyacrylamide gel substrates designed to simulate tissue-like environments. By combining fluorescence microscopy with computational image segmentation and morphology analysis, this work explored how substrate stiffness alters cellular spreading, elongation, and structural organization.
     </p>
     <br><br>
 
@@ -510,33 +511,47 @@
 
     <ul class="popup-list">
         <li>
-          Circulating tumor cells were cultured on soft and stiff polyacrylamide gels to simulate distinct tissue microenvironments. Cytoplasmic and nuclear structures were visualized using CellMask and Hoechst fluorescence staining before being captured through high-resolution microscopy imaging.
+          Circulating tumor cells were cultured on soft (0.5 kPa) and stiff (5 kPa) polyacrylamide gel substrates to simulate distinct tissue microenvironments and investigate how extracellular stiffness influences cellular behavior.
+          To visualize cellular structure, cytoplasmic morphology was labeled using CellMask fluorescence staining while nuclear morphology was captured using Hoechst staining. High-resolution fluorescence microscopy imaging was then used to compare structural adaptations across substrate conditions.
         </li>
-  
+     <div class="research-image-container">
+      <img src="ctc imaging.png" alt="CTC Fluorescence Imaging">
+       <p class="image-caption">
+         Fluorescence microscopy imaging of circulating tumor cells cultured on soft versus stiff polyacrylamide gel substrates using CellMask and Hoechst staining.
+       </p>
+</div>
         <li>
-          To analyze morphology changes, I developed optimized Cellpose segmentation workflows with manual boundary correction and explored thresholding strategies within CellProfiler to improve segmentation consistency across varying staining conditions and cell morphologies.
+          To quantify morphology differences across substrate conditions, optimized Cellpose segmentation workflows and PCA-based computational analysis were applied to both cytoplasmic and nuclear imaging datasets.
+          Analysis focused on morphology features including area, ellipse major axis length, and compactness, as these measurements most strongly reflected changes in cellular spreading, elongation, and structural variability between soft and stiff extracellular environments.
         </li>
-  
-        <li>
-          Principal component analysis (PCA) and quantitative morphology measurements were then used to evaluate how stiffness influenced cellular spreading, compactness, elongation, and nuclear structure.
-        </li>
-     </ul>
-    <br><br>
-     <!-- VISUAL RESULTS --> 
+     <div class="research-image-container">
+      <img src="cellmask-heatmap.png" alt="CellMask PCA Heatmap">
+        <p class="image-caption">
+          PCA loadings heatmap highlighting morphology features contributing most strongly to cytoplasmic variation across substrate conditions.
+        </p>
+     </div>
+     
+   <div class="research-image-container">
+    <img src="hoechst-heatmap.png" alt="Hoechst PCA Heatmap">
+      <p class="image-caption">
+        PCA loadings heatmap of Hoechst-stained nuclear morphology features across soft and stiff extracellular environments.
+      </p>
+   </div>
+  </ul>
+<br><br> 
          
      <!-- ANALYSIS -->
-    <h3 class="popup-section-title">
-      Analysis & Findings
-    </h3>
-
-    <p class="popup-text">
-      Cells cultured on stiff polyacrylamide gels demonstrated increased spreading, elongation, and reduced compactness compared to cells grown on soft substrates. Similar trends were observed in nuclear morphology, where stiff environments produced greater structural variability and more elongated nuclei.
-    </p>
-         
-    <p class="popup-text">
-      These morphology shifts suggest that extracellular matrix stiffness may promote more invasive cellular phenotypes associated with metastatic progression and tissue adaptation.
-    </p>
-    <br><br>
+   <h3 class="popup-section-title">
+     Analysis & Interpretation
+   </h3>
+         <p class="popup-text">
+          Principal component analysis (PCA) was applied to both cytoplasmic and nuclear imaging datasets to identify which morphology features contributed most strongly to variation across substrate conditions. PCA reduced the complexity of the morphology data and helped isolate structural measurements that most effectively captured differences between cells cultured on soft and stiff extracellular environments.
+          <br><br>
+          Analysis focused primarily on area, ellipse major axis length, and compactness because these features consistently demonstrated strong PCA loadings and best reflected changes in cellular spreading, elongation, and structural irregularity. Increased cellular area and major axis length suggested greater spreading and directional elongation under stiffer extracellular conditions, while reduced compactness indicated more irregular and extended cellular morphologies.
+          
+          <br><br>
+          Similar trends were observed across both cytoplasmic and nuclear datasets, where cells cultured on stiff polyacrylamide gels demonstrated larger and more elongated structural organization compared to cells grown on softer substrates. Together, these findings suggest that extracellular matrix stiffness may promote cellular adaptations associated with increased motility, invasiveness, and metastatic potential during circulating tumor cell progression.
+       </p>
          
      <!-- TOOLS & METHODS -->
     <h3 class="popup-section-title">
